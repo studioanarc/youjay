@@ -1,0 +1,129 @@
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.selectGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.select {
+  width: 100%;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+}
+
+.preview {
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--border-color);
+}
+
+.previewLabel {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.previewBox {
+  height: 60px;
+  background: var(--bg-primary);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--border-color);
+}
+
+.previewDemo {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  animation: transitionPreview 3s infinite;
+}
+
+@keyframes transitionPreview {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.previewDemo.wipe-horizontal {
+  animation: wipeHorizontal 3s infinite;
+}
+
+@keyframes wipeHorizontal {
+  0%, 100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+}
+
+.previewDemo.wipe-vertical {
+  animation: wipeVertical 3s infinite;
+}
+
+@keyframes wipeVertical {
+  0%, 100% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
+
+.previewDemo.zoom-in {
+  animation: zoomIn 3s infinite;
+}
+
+@keyframes zoomIn {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+.previewDemo.zoom-out {
+  animation: zoomOut 3s infinite;
+}
+
+@keyframes zoomOut {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0);
+  }
+}
+
+.previewDemo.rotate {
+  animation: rotate 3s infinite;
+}
+
+@keyframes rotate {
+  0%, 100% {
+    transform: rotate(0deg) scale(0);
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+  }
+}

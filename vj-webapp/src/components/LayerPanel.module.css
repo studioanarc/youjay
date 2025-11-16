@@ -1,0 +1,106 @@
+.layerList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.layer {
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.layer:hover {
+  border-color: var(--primary-color);
+  background: rgba(90, 1, 141, 0.05);
+}
+
+.layer.selected {
+  border-color: var(--primary-color);
+  background: rgba(90, 1, 141, 0.1);
+  box-shadow: 0 0 12px rgba(90, 1, 141, 0.3);
+}
+
+.layerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.layerInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex: 1;
+}
+
+.dragHandle {
+  cursor: grab;
+}
+
+.dragHandle:active {
+  cursor: grabbing;
+}
+
+.layerName {
+  flex: 1;
+  background: transparent;
+  border: 1px solid transparent;
+  padding: var(--spacing-xs);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.layerName:hover {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+.layerName:focus {
+  background: var(--bg-secondary);
+  border-color: var(--primary-color);
+}
+
+.layerActions {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.layerControls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.selectGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.selectLabel {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.select {
+  width: 100%;
+  font-size: 0.85rem;
+}
+
+.effectsCount {
+  font-size: 0.75rem;
+  color: var(--secondary-color);
+  text-align: center;
+  padding: var(--spacing-xs);
+  background: rgba(0, 217, 255, 0.1);
+  border-radius: var(--radius-sm);
+}
